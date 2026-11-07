@@ -1,0 +1,53 @@
+# Runtime data and databases
+/data/
+/storage/
+.env
+.env.*
+!.env.example
+!**/.env.example
+backend/.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Ensure catalogue data is never ignored
+!backend/app/data/
+!backend/app/data/catalogue.json
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+coverage/
+test-output/
+test-results/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Nested virtual environments
+**/.venv/
+**/venv/
+**/env/
+
+# Nested virtual environments
+**/.venv/
+**/venv/
+**/env/

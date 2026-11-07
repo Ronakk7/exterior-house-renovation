@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exterior Renovation Planner</title>
+  <link rel="stylesheet" href="/static/css/tokens.css">
+  <link rel="stylesheet" href="/static/css/base.css">
+  <link rel="stylesheet" href="/static/css/components.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner container">
+      <div class="header-brand">
+        <a href="#/" class="brand-link">
+          <span class="brand-icon">🏠</span>
+          <span class="brand-title">Exterior Renovation Planner</span>
+        </a>
+      </div>
+
+      <div id="project-header-info" class="project-header-info hidden">
+        <span class="project-name-label">Project:</span>
+        <span id="header-project-name" class="header-project-name">My house</span>
+      </div>
+
+      <nav class="header-nav">
+        <a href="#/" class="btn btn-secondary btn-sm">All Projects</a>
+      </nav>
+    </div>
+
+    <div id="mock-banner" class="mock-banner hidden">
+      ⚠️ Demo mode: AI responses are simulated
+    </div>
+
+    <!-- Stepper (visible on project screens) -->
+    <div id="stepper-container" class="stepper-container hidden">
+      <div class="container">
+        <nav id="workflow-stepper" class="stepper" aria-label="Workflow progress"></nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main id="main-content" class="main-content container">
+    <div class="loading-state">Loading application...</div>
+  </main>
+
+  <!-- Busy Overlay for Slow / AI Operations -->
+  <div id="busy-overlay" class="busy-overlay hidden" aria-live="polite">
+    <div class="busy-card">
+      <div class="spinner"></div>
+      <p id="busy-message" class="busy-message">Processing...</p>
+      <span id="busy-timer" class="busy-timer">0s</span>
+      <p id="busy-hint" class="busy-hint hidden">This can take up to a minute.</p>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Confirmation Modal -->
+  <div id="confirm-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <h3 id="modal-title" class="modal-title">Confirm Action</h3>
+      <p id="modal-message" class="modal-message">Are you sure you want to proceed?</p>
+      <div class="modal-actions">
+        <button id="modal-btn-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="modal-btn-confirm" class="btn btn-danger">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <div class="container footer-content">
+      <p>Estimates are approximate and advisory, not a binding quotation.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>
+
